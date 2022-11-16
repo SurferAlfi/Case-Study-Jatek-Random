@@ -25,6 +25,18 @@ namespace Suli
             Console.WriteLine("Randomizált detail: ");
             Console.WriteLine("   Pozitív hozadék:     {0}", Positive[pIndex]);
             Console.WriteLine("   Negatív hozadék:   {0}", Negative[nIndex]);
+            
+             //Dobókocka
+            int playerRandomNum;
+            Random random = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Dobókocka");
+                Console.ReadKey();
+                playerRandomNum = random.Next(1, 7);
+                Console.WriteLine("You rolled a " + playerRandomNum);
+            }
+            Console.ReadKey();
         }
     }
 }
