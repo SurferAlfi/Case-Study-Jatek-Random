@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Suli
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rnd = new Random();
+            string[] Positive = {"Magas bérezés", "Futurisztikus stack", "Full remote munkavégzés",
+            "Komoly domain", "Teljes munkaköri leírás", "2 körös interjú"};
+            string[] Negative = {"Alacsony bérezés", "OnSite munkavégzés", "X+ nyelv ismerete", "Oldschool stack",
+            "20 órányi tesztírás" };
+
+            // Generate random indexes for pet names.
+            int pIndex = rnd.Next(Positive.Length);
+            int nIndex = rnd.Next(Negative.Length);
+
+            // Display the result.
+            Console.WriteLine("Randomizált detail: ");
+            Console.WriteLine("   Pozitív hozadék:     {0}", Positive[pIndex]);
+            Console.WriteLine("   Negatív hozadék:   {0}", Negative[nIndex]);
+        }
+    }
+}
